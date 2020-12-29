@@ -10,7 +10,6 @@ const figureParts = document.querySelectorAll('.figure-part');
 const words = ['application', 'programming', 'interface', 'wizard'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
-// console.log(selectedWord);
 
 const correctLetters = [];
 const wrongLetters = [];
@@ -45,7 +44,7 @@ function updateWrongLettersEl() {
 
   figureParts.forEach((part, index) => {
     const errors = wrongLetters.length;
-
+ 
     if(index < errors) {
       part.style.display = 'block';
     } else {
