@@ -18,7 +18,7 @@ button:active {
 
 input:focus,
 button:focus {
-  outline: 0;
+  outline: none;
 }
 
 header {
@@ -42,7 +42,7 @@ header::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 header * {
@@ -63,7 +63,7 @@ form input {
   border: 0;
   border-radius: 50px;
   font-size: 16px;
-  padding: 15px;
+  padding: 15px 30px;
   width: 100%;
 }
 
@@ -80,7 +80,7 @@ form button {
 }
 
 .btn {
-  background-color: #8d55fd;
+  background-color: #8d56fd;
   border: 0;
   border-radius: 10px;
   color: #fff;
