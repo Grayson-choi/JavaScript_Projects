@@ -126,4 +126,4 @@ mealsEl.addEventListener('click', e => {
     const mealID = mealInfo.getAttribute('data-mealid');
     getMealById(mealID);
   }
-})
+});
