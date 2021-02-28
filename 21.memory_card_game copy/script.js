@@ -4,6 +4,7 @@ const rules = document.getElementById('rules');
 const startBtn = document.getElementById('start-btn');
 const card = document.getElementsByName('card');
 const hintBtn = document.getElementById('hint-btn');
+const cntEl = document.getElementById('cnt');
 let cnt = 0;
 let selectedId = "";
 
@@ -43,6 +44,9 @@ function clickCard() {
     console.log("cards", cards);
 
     cnt += 1;
+    cntEl.innerHTML = `${cnt}`;
+    
+    
     if (cards.length == 20){
       document.body.innerHTML = `
       <h2>축하합니다. 게임을 성공하셨습니다.<br><br>
