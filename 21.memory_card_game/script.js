@@ -7,25 +7,34 @@ const hintBtn = document.getElementById('hint-btn');
 let cnt = 0;
 let selectedId = "";
 
-cardList = [];
-for(j = 0; j < 2; j++){
-  for(i = 1; i< 11; i ++){
-    let card = document.createElement('div');
-    card.className = `card`;
-    card.id = `${i}`;
-    
-    card.addEventListener('click', clickCard);
-    cardList.push(card);
-  }
+function startGame() {
+  makeCards()
 }
 
-// 랜덤 함수로 시작
-cardList.sort(function(){
-  return Math.random() - Math.random();
-})
 
-for (i = 0; i < cardList.length; i++) {
-  cards.appendChild(cardList[i]);  
+
+function makeCards() {
+  cardList = [];
+  for(j = 0; j < 2; j++){
+    for(i = 1; i< 11; i ++){
+      let card = document.createElement('div');
+      card.className = `card`;
+      card.id = `${i}`;
+      
+      card.addEventListener('click', clickCard);
+      cardList.push(card);
+    }
+  }
+
+  // 랜덤 함수로 시작
+  cardList.sort(function(){
+    return Math.random() - Math.random();
+  })
+
+  for (i = 0; i < cardList.length; i++) {
+    cards.appendChild(cardList[i]);  
+  }
+
 }
 
 
@@ -91,7 +100,7 @@ function clickCard() {
 }
 
 
-function startGame() {
+function resetGame() {
   window.location.reload();
 }
 
@@ -119,5 +128,5 @@ function hintGame(){
 // Rules and close event handlers
 rulesBtn.addEventListener('click', () => rules.classList.add('show'));
 closeBtn.addEventListener('click', () => rules.classList.remove('show'));
-startBtn.addEventListener('click', startGame);
+startBtn.addEventListener('click', resetGame);
 hintBtn.addEventListener('click', hintGame);
