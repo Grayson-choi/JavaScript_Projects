@@ -1,3 +1,6 @@
 [submodule "js"]
 	path = js
 	url = https://github.com/Grayson-choi/JavaScript-Project
+[submodule "1st-hackarton-card-game/1st-hackarton-card-game/1st-hackarton"]
+	path = 1st-hackarton-card-game/1st-hackarton-card-game/1st-hackarton
+	url = https://github.com/team-hyena/1st-hackarton
